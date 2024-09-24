@@ -1,0 +1,206 @@
+@media (max-width: 1200px) {
+    .top__list {    
+        width: 600px;
+    } 
+
+    .oldEvent__cards {    
+        width: 700px;
+    } 
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 994px;
+    }   
+
+    .top__list, .oldEvent__cards {    
+        width: 550px;
+    } 
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 962px;
+    }
+
+    .header-personal__container {
+        padding: 0 15px;
+    }
+
+    .main-personal__container {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .aside-personal {
+        padding: 10px;
+        width: 100%;
+        border-right: none;
+        overflow-x: scroll;        
+    }
+
+    .aside-personal::-webkit-scrollbar {
+       height: 8px;
+    }
+
+    .aside-personal__inner{
+        flex-direction: row; 
+        gap: 15px;       
+    }
+
+    .aside-menu {
+        padding-bottom: 10px;
+        flex-direction: row;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+        border-bottom: none;
+        gap: 15px;
+    }
+
+    .aside-menu.visible {
+        transform: translateX(0);
+    }
+
+    .aside-personal__close, .box__close, .aside-menu__title {
+        display: none;
+    }   
+
+    .aside-menu__item {
+        width: max-content;
+    }
+
+    .aside-menu__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .top__list, .oldEvent__cards {    
+        width: 700px;
+    } 
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 762px;
+    }
+    
+    body {
+        font-size: 0.8rem;
+    }
+
+    .aside-menu__link {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .personal-section__title {
+        font-size: 32px;
+    }
+
+    .personal-section__subtitle {
+        font-size: 28px;
+    }
+
+    .track {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .track__actions {
+        grid-column: span 2;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .track__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .top__list {    
+        width: 520px;
+    } 
+
+    .event-card__link {
+        min-height: 300px;
+    }
+
+    .oldEvent__cards {
+        height: 700px;
+    }
+
+    .oldEvent__cards {    
+        width: 500px;
+    } 
+
+    .winner__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 562px) {
+    .container {
+        max-width: 532px;
+    }
+
+    .aside-menu__link span {
+        display: none;
+    }
+
+    .aside-personal__box {
+        width: auto;
+    }
+    .new__top {
+        grid-template-columns: 1fr;
+    }
+
+    .news__img {
+        height: 200px;
+    }
+
+    .modal__body {
+        min-width: 300px;
+    }
+
+    .top__list, .oldEvent__cards {    
+        width: 280px;
+    } 
+    
+    .personal-section__title span {
+        display: none;
+    }
+
+    .event-card__price {
+        font-size: 16px;
+    }
+
+    .swiper__buttons {
+        display: none;
+    }
+
+    .winner-card__img {
+        width: 60px;
+        height: 60px;
+    }
+} 
+
+@media (max-width: 380px) {
+    .container {
+        padding: 0 5px;
+        max-width: 280px;
+    }
+
+    .track {
+        grid-template-columns: 1fr;
+    }
+
+    .track__img {
+        height: 170px;
+        width: 170px;
+    }
+
+    .track__actions {
+        grid-column: span 1;
+        
+    }
+}
