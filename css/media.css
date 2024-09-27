@@ -60,6 +60,10 @@
     .contacts {
         align-self: flex-start;
     }
+
+    .services__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 992px) {
@@ -92,6 +96,9 @@
     .link {
         font-size: 14px;
     }
+    .services {
+        margin: 50px 0;
+    }
 }
 
 @media (max-width: 562px) {
@@ -101,6 +108,10 @@
 
     body {
         font-size: 14px;
+    }
+
+    .title {
+        font-size: 28px;
     }
 
     .header__container {
@@ -123,6 +134,38 @@
 
     .hero__descr {
         font-size: 1rem;
+    }
+
+    .services__container {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        margin-bottom: 50px;
+        padding: 10px 0;
+    }
+
+    .banner__item {
+        height: 80px;
+    }
+
+    .questions {
+        margin-bottom: 50px;
+    }
+
+    .questions__item--btn {
+        font-size: 18px;
+        
+    }
+
+    .questions__item--arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .questions__item--body {
+        padding-left: 15px;
+        max-width: 90%;
     }
 }
 

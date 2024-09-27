@@ -247,6 +247,11 @@ body {
     transition: 1s;
 }
 
+.title {
+    font-size: 36px;
+    color: var(--color-second);
+}
+
 /*HEADER*/
 .header {
     padding: 20px 0 0;    
@@ -387,6 +392,7 @@ body {
 .hero {    
     width: 100%;
     height: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 .hero__container {
@@ -545,7 +551,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;    
-    z-index: 0;
+    z-index: -1;
     overflow: hidden;
 }
 
@@ -611,3 +617,294 @@ body {
   *::-ms-thumb {
     border-radius: 4px; /* Закругленные углы для тумблера */
   }
+  .hidden {
+    opacity: 0;
+    visibility: visible;
+    transform: scale(0.8) translateY(-100%);    
+}
+
+/*Destrib*/
+.all {    
+    transition: all 0.3s ease-in-out;
+}
+
+.destrib__content {
+    padding-top: 100px;
+    margin-left: auto;
+    width: 50%;
+}
+
+/*Services*/
+.services {
+    margin: 200px 0 100px 0;
+}
+
+.services__container {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.services__cart {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+} 
+  
+.top-icon {
+    background-color: transparent;
+    outline: transparent;
+    position: relative;
+    width: 6.5em;
+    height: 6.5em;
+    perspective: 24em;
+    transform-style: preserve-3d;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.top-icon__back,
+.top-icon__front,
+.top-icon__label {
+	transition:
+		opacity 0.3s cubic-bezier(0.83,0,0.17,1),
+		transform 0.3s cubic-bezier(0.83,0,0.17,1);
+}
+
+.top-icon__back,
+.top-icon__front {
+	border-radius: 1.25em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.top-icon__back {
+	background: linear-gradient(hsl(223,10%,50%),hsl(208,10%,50%));
+	box-shadow: 0.5em -0.5em 0.75em hsla(223,10%,10%,0.15);
+	display: block;
+	transform: rotate(15deg);
+	transform-origin: 100% 100%;
+}
+
+.top-icon__front {
+	background-color: hsla(0,0%,100%,0.3);
+	box-shadow: 0 0 0 0.125em hsla(0,0%,100%,0.3) inset;
+	backdrop-filter: blur(0.75em);
+	-webkit-backdrop-filter: blur(0.75em);
+	display: flex;
+	transform-origin: 80% 50%;
+}
+
+.services__cart:nth-child(1) .top-icon__back {
+	background: linear-gradient(hsl(223,90%,50%),hsl(208,90%,50%));
+}
+
+.services__cart:nth-child(2) .top-icon__back {
+	background: linear-gradient(hsl(157,90%,50%),hsl(108,90%,50%));
+}
+
+.services__cart:nth-child(3) .top-icon__back {
+	background: linear-gradient(hsl(64, 90%, 50%),hsl(58,90%,50%));
+}
+
+.services__cart:nth-child(4) .top-icon__back {
+	background: linear-gradient(hsl(303,90%,50%),hsl(342, 76%, 49%));
+}
+
+.top-icon__icon {
+	margin: auto;
+	width: 2em;
+	height: 2em;
+    fill: var(--color-white)
+}
+
+.services__cart:focus-visible .top-icon__back,
+.services__cart:hover .top-icon__back {
+	transform: rotate(18.5deg);
+}
+
+.services__cart:focus-visible .top-icon__front,
+.services__cart:hover .top-icon__front {
+	transform: translateZ(2em) rotateX(20deg) rotateY(20deg);
+}
+
+.services__cart--bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.services__cart--title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.services__cart--title::after {
+    content: '';
+    width: 30%;
+    height: 1px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;    
+    transition: width 0.3s ease-in-out;
+}
+
+.services__cart:nth-child(1) .services__cart--title::after {
+    background-color: hsl(208,90%,50%);
+}
+
+.services__cart:nth-child(2) .services__cart--title::after {
+    background-color: hsl(108,90%,50%);
+}
+
+.services__cart:nth-child(3) .services__cart--title::after {
+    background-color: hsl(58,90%,50%);
+}
+
+.services__cart:nth-child(4) .services__cart--title::after {
+    background-color: hsl(342, 76%, 49%);
+}
+
+.services__cart:focus-visible .services__cart--title::after,
+.services__cart:hover .services__cart--title::after {
+    width: 100%;
+}
+
+.services__cart--text {
+    text-align: center;
+}
+
+/*Banner*/
+.banner {
+    margin-bottom: 100px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+
+.banner__body {  
+    margin-right: 25px;  
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;    
+    animation: ticker-kf 30s linear infinite;
+}
+
+.banner__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    height: 100px;
+    background-color: var(--color-white);
+    color: var(--color-gray);
+    font-size: 36px;  
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  
+}
+
+.banner__item:hover {
+    color: var(--color-blue);
+    box-shadow: 0 0 25px rgba(83, 95, 246, 0.65);
+    transform: scale(1.05);
+}
+
+@keyframes ticker-kf {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+} 
+  
+  /*Questions*/
+.questions {
+    margin-bottom: 100px;    
+}
+
+.questions__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.questions__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+}
+
+.questions__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.questions__item--header {    
+    width: 100% ;
+}
+
+.questions__item--btn {
+    padding: 10px 10px 20px 10px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    color: var(--color-black);
+    font-size: 24px;
+    font-weight: 700;   
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-blue);
+    transition: border 0.3s ease-in-out;
+}
+
+.questions__item--arrow {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.questions__item--arrow path {
+    fill: var(--color-blue);    
+    transition: fill 0.3s ease-in-out;
+}
+
+.questions__item.open .questions__item--btn {
+    border-color: transparent;
+}
+
+.questions__item.open .questions__item--arrow {
+    transform: rotate(90deg);
+}
+
+.questions__item--body {
+    padding-left: 70px;
+    max-width: 60%;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+}
