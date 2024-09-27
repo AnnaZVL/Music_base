@@ -20,25 +20,8 @@
     fill: var(--color-white);
 }
 
-.tultip__content {
-    padding: 10px;
-    position: absolute;
-    bottom: -135px;
-    left: 50%;
-    z-index: 10;
-    transform: translateX(-50%);
-    font-size: 18px;
+.tippy-box {
     background-color: var(--color-bg);
-    border-radius: 20px;
-    min-width: 300px;
-    opacity: 0;    
-    visibility: visible;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.tultip__btn:hover + .tultip__content {    
-    opacity: 1;
-    visibility: visible;
 }
 
 .scroll-stop {
@@ -66,8 +49,8 @@
     z-index: 10;
     min-width: 200px;
     width: max-content;
-    min-height: 100px;
-    background-color: rgba(var(--color-blue-r), 0.2);
+    min-height: 100px;    
+    background-color: var(--color-drop);
     border-radius: 20px;
     opacity: 0;
     visibility: hidden;
@@ -614,7 +597,7 @@
 .form__input {
     padding: 13px 20px;    
     height: 48px;
-    width: 85%;
+    width: 100%;
     font-weight: 500;
     border-radius: 4px;
     font-size: 14px;
@@ -1264,12 +1247,15 @@
 }
 
 .steps__item {
-    padding: 10px 0 15px 0;
+    padding: 10px 5px 15px 0;
     position: relative;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     flex: 1;
     text-align: right;
     transition: border 0.3s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .steps__item::before {
@@ -1285,8 +1271,7 @@
     transition: background 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.steps__item--text {
-    margin-right: auto;
+.steps__item--text {    
     display: inline-block;
     color: var(--color-white);
     font-size: 18px;
@@ -1379,7 +1364,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    max-width: 80%;
+    max-width: 90%;
     gap: 60px;
     border-radius: 20px;
     border: 1px solid rgba(83, 95, 246, 0.4);
@@ -1399,7 +1384,7 @@
 
 .form-step__box {
    position: relative;
-   min-width: 30%;
+   min-width: 250px;
 }
 
 .form-step__box > .tultip {
@@ -1528,9 +1513,9 @@
     border-color: var(--color-second);
 }
 
-.form-step__wrapper {
+.form-step__wrapper {    
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px 20px;
     width: 100%;
 }
@@ -1599,10 +1584,15 @@ input[type='date']::after {
     outline: none;
     border: 1px solid var(--color-blue);   
     font-size: 24px;
+    width: 100%;
 }
 
 .form-step__label--area {
     grid-column: span 2;
+}
+
+.form-step__label--area > .tultip {
+    top: 10%;
 }
 
 .step__btn, .form-step__btn {
@@ -1638,13 +1628,12 @@ input[type='date']::after {
     border-color: var(--color-second);
 }
 
-.added-singl {
-    padding: 20px;    
+.added-singl { 
+    margin-top: 15px;       
     display: none;
     gap: 30px;
-    flex-shrink: 1;    
-    border-radius: 20px;
-    border: 1px solid rgba(83, 95, 246, 0.4);
+    flex-shrink: 1;   
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -1666,6 +1655,7 @@ input[type='date']::after {
 .upload-singl {       
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;    
     width: 100%;
 }
@@ -1765,8 +1755,7 @@ input[type='date']::after {
     border-radius: 20px;
 }
 
-.payment__body {
-     
+.payment__body {     
     display: flex; 
     flex-direction: column;   
     gap: 20px;   
@@ -1781,8 +1770,7 @@ input[type='date']::after {
 .payment__content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    
+    gap: 20px;    
 }
 
 .payment__name {
@@ -1832,28 +1820,35 @@ input[type='date']::after {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15px;    
+    justify-content: space-between;    
+    gap: 10px;    
     border: 1px solid rgba(83, 95, 246, 0.4);
     border-radius: 10px; 
 }
 
+.payment__result-actions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-basis: 70%;
+}
+
 .payment__text {
     display: inline-block;
-    padding-right: 10px;
+    padding-right: 20px;
     position: relative;
-    font-size: 18px;
-    flex-basis: 20%;
+    font-size: 18px;    
 }
 
 .payment__text::after {
     content: '₽';
     position: absolute;
-    right: 10px;    
+    right: 0px;    
 }
 
 .payment__btn {
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: 1px solid var(--color-blue);
     border-radius: 10px; 
     color: var(--color-white);
@@ -1868,9 +1863,8 @@ input[type='date']::after {
 
 .additionally {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;    
 }
 
 .additionally__card {

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let newTrack = {}; // Объект для нового трека
     let newAlbum = {}; // Объект для нового альбома
     const NO_FOTO = '../img/personal_page/no-photo.jpg' // путь к фото-заглушке
+    
     // настройка Выбора жанра
     const genre = document.getElementById('genre');
     if (genre) {
@@ -19,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
             allowHTML: true
         });
     }
+
+    //Пожключение всплывающих подсказок
+    tippy('[data-tippy-content]', {
+        arrow: true
+    });
 
     // Шаги добавления песни
     const stepSections = document.querySelectorAll('.step__section'),
@@ -404,34 +410,22 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p>Название трека</p>
                             <input class="form-step__input track-name" type="text" id="track-name${count}" placeholder="Название">
                             <div class="tultip">
-                                <button class="tultip__btn" type="button">
+                                <button class="tultip__btn" type="button" data-tippy-content="Tooltip">
                                     <svg class="tultip__icon">
                                         <use xlink:href="#tultip"></use>
                                     </svg>
-                                </button>
-                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing
-                                    elit.
-                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
-                                    pariatur
-                                </p>
+                                </button>                                
                             </div>
                         </label>
                         <label class="form-step__label" for="name-singer${count}">
                             <p>Исполнитель</p>
                             <input class="form-step__input name-singer" type="text" id="track-autorSinger${count}" placeholder="Исполнитель">
                             <div class="tultip">
-                                <button class="tultip__btn" type="button">
+                                <button class="tultip__btn" type="button" data-tippy-content="Tooltip">
                                     <svg class="tultip__icon">
                                         <use xlink:href="#tultip"></use>
                                     </svg>
-                                </button>
-                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing
-                                    elit.
-                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
-                                    pariatur
-                                </p>
+                                </button>                                
                             </div>
                         </label>
 
@@ -439,17 +433,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p>Автор музыки *</p>
                             <input class="form-step__input autor-musik" type="text" id="track-autorMusik${count}" placeholder="ФИО">
                             <div class="tultip">
-                                <button class="tultip__btn" type="button">
+                                <button class="tultip__btn" type="button" data-tippy-content="Tooltip">
                                     <svg class="tultip__icon">
                                         <use xlink:href="#tultip"></use>
                                     </svg>
-                                </button>
-                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing
-                                    elit.
-                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
-                                    pariatur
-                                </p>
+                                </button>                                
                             </div>
                         </label>
 
@@ -457,51 +445,33 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p>Автор слов *</p>
                             <input class="form-step__input autor-text" type="text" id="track-autorText${count}" placeholder="ФИО">
                             <div class="tultip">
-                                <button class="tultip__btn" type="button">
+                                <button class="tultip__btn" type="button" data-tippy-content="Tooltip">
                                     <svg class="tultip__icon">
                                         <use xlink:href="#tultip"></use>
                                     </svg>
-                                </button>
-                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing
-                                    elit.
-                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
-                                    pariatur
-                                </p>
+                                </button>                                
                             </div>
                         </label>
                         <label class="form-step__label" for="track-isrc${count}">
                             <p>ISRC</p>
                             <input class="form-step__input" type="text" id="track-isrc${count}">
                             <div class="tultip">
-                                <button class="tultip__btn" type="button">
+                                <button class="tultip__btn" type="button" data-tippy-content="Tooltip">
                                     <svg class="tultip__icon">
                                         <use xlink:href="#tultip"></use>
                                     </svg>
-                                </button>
-                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing
-                                    elit.
-                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
-                                    pariatur
-                                </p>
+                                </button>                                
                             </div>
                         </label>
                         <label class="form-step__label" for="track-upc${count}">
                             <p>UPC</p>
                             <input class="form-step__input" type="text" id="track-upc${count}">
                             <div class="tultip">
-                                <button class="tultip__btn" type="button">
+                                <button class="tultip__btn" type="button" data-tippy-content="Tooltip">
                                     <svg class="tultip__icon">
                                         <use xlink:href="#tultip"></use>
                                     </svg>
-                                </button>
-                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing
-                                    elit.
-                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
-                                    pariatur
-                                </p>
+                                </button>                                
                             </div>
                         </label>
                     </div>
@@ -553,15 +523,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     <textarea class="form-step__textarea" id="text${count}" rows="10"></textarea>
 
                     <div class="tultip">
-                        <button class="tultip__btn" type="button">
+                        <button class="tultip__btn" type="button" data-tippy-content="Tooltip">
                             <svg class="tultip__icon">
                                 <use xlink:href="#tultip"></use>
                             </svg>
-                        </button>
-                        <p class="tultip__content">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
-                            magni modi, adipisci cumque, minus nulla tenetur pariatur
-                        </p>
+                        </button>                        
                     </div>
                 </label>`
         return block
@@ -598,8 +564,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Добавляем отображение названия и обложки с шага 2 
         document.querySelector('.payment__name-album').textContent = newAlbum.name;
-        document.querySelector('.payment__img-album').src = imgAlbumPath;
-        document.querySelector('.payment__name--autor-album').textContent = newAlbum.singer; 
+        document.querySelector('.payment__img-album').src = imgAlbumPath || NO_FOTO;
+        document.querySelector('.payment__name--autor-album').textContent = `Исполнитель: ${newAlbum.singer || "Не известен"}`
         document.querySelector('.payment__autor-album').textContent = `В альбоме ${newAlbum.tracks.length} трека`; 
     });  
 

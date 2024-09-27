@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $buttonClose.classList.toggle('show')
     })
 
-    // Скрытие подменю
+    // Скрытие подменю в боковой панели
     const $buttonBoxClose = document.getElementById('closeBox'),
         $menuAll = document.querySelectorAll('.aside-personal__menu');
 
@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $asideMenuAll.forEach(item => {          
         const page = item.getAttribute('data-content');
-        if (currentPage === page) {
-            console.log('ok', item.dataset.content);
+        if (currentPage === page) {           
             item.classList.add('active');
         } else {
             item.classList.remove('active');
@@ -48,9 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Модальное окно
     // Открытие модального окна
     const $btnOpenModal = document.getElementById('sign'),
-        modal = document.getElementById('modal'),
+        modal = document.getElementById('modal'),        
         $btnCloseModal = document.querySelectorAll('.modal__close'),
-        $btnAgreement = document.getElementById('agreement'),
+        $btnAgreementAll = document.querySelectorAll('.agreement'),
         modalAgreement = document.getElementById('modalAgreement');
 
     $btnOpenModal.addEventListener('click', () => {
@@ -90,12 +89,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
     // Открытие модалки с реквизитами договора
-    if($btnAgreement) {
-    $btnAgreement.addEventListener('click', () => {
+    if($btnAgreementAll) {
+    $btnAgreementAll.forEach(btn => {
+        btn.addEventListener('click', () => {
             modalAgreement.classList.add('visible');
             document.body.classList.add('scroll-stop');
         })
-    }
+    })
+}
+    
+
+    // Открытие модалки с реквизитами договора
+    $btnAgreementAll.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modalAgreement.dataset.name = btn.id
+            modalAgreement.classList.add('visible');
+            document.body.classList.add('scroll-stop');
+        })
+    })
+     
 
     // Переключение форм входа
     // Смена кнопки
@@ -166,13 +178,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Кнопка загрузки
     const $btnDownload = document.getElementById('download'),
     $list = document.querySelector('.header__box');
-
-    $btnDownload.addEventListener('click', () => {
+    
+    // Открытие дропдауна
+    $btnDownload.addEventListener('click', (event) => {
         $list.classList.add('show');
+        event.stopPropagation()
     })
 
+    // Закрытие списка по клику вне его
+    document.addEventListener('click', (event) => {
+        if (!$list.contains(event.target)) {
+            console.log('object');
+            $list.classList.remove('show');
+        }
+    })
+    
+    
     // Закрытие списка по эскейп
     window.addEventListener('keydown', function (event) {
+        
         if (event.key === 'Escape' && $list.classList.contains('show')) {            
             $list.classList.remove('show');
         }

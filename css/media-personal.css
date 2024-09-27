@@ -6,6 +6,10 @@
     .oldEvent__cards {    
         width: 700px;
     } 
+
+    .catalog__item--actions, .catalog__item--box {
+        flex-direction: column;        
+    }
 }
 
 @media (max-width: 1024px) {
@@ -136,6 +140,32 @@
         grid-template-columns: 1fr;
     }
 
+    .catalog__header, .catalog__item--info, .catalog__item--inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .download__buttons > .download__btn {
+        font-size: 18px;
+    }
+
+    .download__title {
+        font-size: 28px;
+    }
+
+    .download__content-title {
+        font-size: 24px;
+    }
+
+    .payment__top {
+        flex-direction: column;
+    }
+
+    .payment__result-actions {
+        flex-direction: column;
+        flex-basis: 40%;
+    }
+
 }
 
 @media (max-width: 562px) {
@@ -181,6 +211,41 @@
     .winner-card__img {
         width: 60px;
         height: 60px;
+    }
+
+    .catalog__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .catalog__item--info {
+        flex-basis: 0%;
+        width: 100%;
+    }
+
+    .catalog__item--inner, .catalog__item--actions, .catalog__item--box {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 0%;
+        width: 100%;
+    }
+
+    .steps__item {
+        justify-content: flex-end;
+    }
+
+    .steps__item--text {
+        margin: 0;;
+    }
+
+    .steps__item--text:first-child {
+        display: none;
+    }
+
+    .payment__result {
+        flex-wrap: wrap;
+        gap: 20px;
     }
 } 
 
