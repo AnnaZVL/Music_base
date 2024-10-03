@@ -10,6 +10,10 @@
     .catalog__item--actions, .catalog__item--box {
         flex-direction: column;        
     }
+
+    .statistics__chart {
+        width: 600px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -166,6 +170,10 @@
         flex-basis: 40%;
     }
 
+    .statistics__chart {
+        width: 500px;
+    }
+
 }
 
 @media (max-width: 562px) {
@@ -246,6 +254,10 @@
     .payment__result {
         flex-wrap: wrap;
         gap: 20px;
+    }
+
+    .statistics__chart, .statistics__filters {
+        display: none;
     }
 } 
 

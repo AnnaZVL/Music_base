@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal_Page</title>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../libs/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../libs/choices.min.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/personal.css">
@@ -475,7 +474,7 @@
                                     </a>
                                 </li>
                                 <li class="personal__item aside-menu__item" data-content="profile">
-                                    <a class="aside-menu__link" href="./profile.html" >
+                                    <a class="aside-menu__link" href="./profile.html">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#user"></use>
                                         </svg>
@@ -505,7 +504,7 @@
                                         <span>Мой каталог</span>
                                     </a>
                                 </li>
-                                <li class="personal__item aside-menu__item" data-content="statistics">
+                                <li class="personal__item aside-menu__item" data-content="static">
                                     <a class="aside-menu__link" href="../pages/statistics.html">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#static"></use>
@@ -573,150 +572,66 @@
                     </div>
                 </aside>
                 <article class="personal-content">
-                    <section class="personal-section news">
-                        <h2 class="personal-section__title">новости</h2>
-                        <div class="new__top">
-                            <img class="news__img" src="../img/personal_page/albums/Kancler.webp" alt="Обложка новости">
-                            <h4 class="personal-section__subtitle">Заголовок новости специально сделан
-                                длинным, что бы показать окончание строки</h4>
-                        </div>
-
-                        <div class="news__body">
-                            <p class="news__descr personal-section__descr">Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Facere
-                                est voluptatibus labore ipsa, reiciendis sit dolor quia excepturi accusamus. Iusto,
-                                quasi cupiditate! Ex, fugit sapiente atque quis quod amet! Eos odit rerum ratione
-                                ullam optio veniam mollitia asperiores provident sunt blanditiis quibusdam, magni
-                                beatae totam atque sint nesciunt explicabo repellendus.</p>
-                            <div class="news__bottom">
-                                <time datetime="2024-05-24">24 мая 2024</time>
-                                <a class="news__link link" href="#">
-                                    <span class="link__line link__line--top"></span>
-                                    <span class="link__line link__line--right"></span>
-                                    <span class="link__line link__line--bottom"></span>
-                                    <span class="link__line link__line--left"></span>
-                                    Подробнее</a>
+                    <section class="personal-section statistics">
+                        <div class="statistics__top">
+                            <h2 class="personal-section__subtitle">Все релизы</h2>
+                            <div class="statistics__actions user">
+                                <button class="user__btn btn">
+                                    <svg class="user__icon">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </button>
+                                <button class="user__btn btn">
+                                    +
+                                </button>
+                                <button class="user__btn btn">
+                                    <svg class="user__icon">
+                                        <use xlink:href="#notifi"></use>
+                                    </svg>
+                                </button>
+                                <div class="user__avatar">
+                                    <img src="../img/personal_page/Dobryk.jpg" alt="">
+                                    <span class="user__check">300</span>
+                                </div>
                             </div>
                         </div>
-                    </section>
-                    <section class="personal-section top">
-                        <h2 class="personal-section__title">Топ 10 <span>исполнителей </span></h2>
-                        <div class="top__list swiper">
-                            <div class="top__list-wrapper swiper-wrapper">
-                                <div class="swiper-slide top__card first">
-                                    <img class="top__img" src="../img/personal_page/Pendragon.jpg" alt="">
-                                    <div class="top__content">
-                                        <span class="top__name">Имя Исполнителя</span>
-                                        <span class="top__rating">6589 баллов</span>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide top__card">
-                                    <img class="top__img" src="../img/personal_page/Pendragon.jpg" alt="">
-                                    <div class="top__content">
-                                        <span class="top__name">Другой автор</span>
-                                        <span class="top__rating">5215 баллов</span>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide top__card">
-                                    <img class="top__img" src="../img/personal_page/Pendragon.jpg" alt="">
-                                    <div class="top__content">
-                                        <span class="top__name">Еще один</span>
-                                        <span class="top__rating">3489 баллов</span>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide top__card">
-                                    <img class="top__img" src="../img/personal_page/Pendragon.jpg" alt="">
-                                    <div class="top__content">
-                                        <span class="top__name">Другой автор</span>
-                                        <span class="top__rating">5215 баллов</span>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide top__card">
-                                    <img class="top__img" src="../img/personal_page/Pendragon.jpg" alt="">
-                                    <div class="top__content">
-                                        <span class="top__name">Еще один</span>
-                                        <span class="top__rating">3489 баллов</span>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide top__card">
-                                    <img class="top__img" src="../img/personal_page/Pendragon.jpg" alt="">
-                                    <div class="top__content">
-                                        <span class="top__name">Другой автор</span>
-                                        <span class="top__rating">5215 баллов</span>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide top__card">
-                                    <img class="top__img" src="../img/personal_page/Pendragon.jpg" alt="">
-                                    <div class="top__content">
-                                        <span class="top__name">Еще один</span>
-                                        <span class="top__rating">3489 баллов</span>
-                                    </div>
-                                </div>
+                        <ul class="statistics__list">
+                            <li class="statistics__item">
+                                <span class="statistics__item--title">Пол года</span>
+                                <span class="statistics__item--count">102356</span>
+                            </li>
+                            <li class="statistics__item">
+                                <span class="statistics__item--title">Месяц</span>
+                                <span class="statistics__item--count">56</span>
+                            </li>
+                            <li class="statistics__item">
+                                <span class="statistics__item--title">Сутки</span>
+                                <span class="statistics__item--count">16</span>
+                            </li>
+                        </ul>
+                        <div class="statistics__filters">
+                            <div class="statistics__filters--left">
+                                <h4>По выбранному релизу</h4>
+                                <select class="statistics__filter" name="filter-track" id="filter-track" select-one>
+                                    <option value="autor">Name track</option>
+                                    <option value="name">По названию</option>
+                                    <option value="status">По статусу</option>
+                                </select>
                             </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </section>
-                    <section class="personal-section playlists">
-                        <h2 class="personal-section__title">Новые песни</h2>
-                        <div class="playlists__item track">
-                            <img class="track__img" src="../img/personal_page/albums/Miller.jpg" alt="Обложка песни">
-                            <div class="track__content">
-                                <h5 class="track__name">название песни</h5>
-                                <span class="track__autor">Имя Исполнителя</span>
-                                <span class="track__time">Дата релиза: 15.03.24</span>
-                            </div>
-                            <div class="track__actions">
-                                <button class="btn track__btn ">
-                                    <svg class="track__icon track__icon--play">
-                                        <use xlink:href="#play"></use>
-                                    </svg>
-                                    <span class="track__btn--text">Послушать</span>
-                                </button>
-                                <button class="btn track__btn track__like">
-                                    <svg class="track__icon track__icon--like">
-                                        <use xlink:href="#like"></use>
-                                    </svg>
-                                    <span class="track__btn--text">Отметить</span>
-                                </button>
-                                <button class="btn track__btn">
-                                    <svg class="track__icon track__icon--donat">
-                                        <use xlink:href="#donat"></use>
-                                    </svg>
-                                    <span class="track__btn--text">Поддержать</span>
-                                </button>
-                            </div>
+                            <select class="statistics__filter" name="filter-period" id="filter-period" select-one>
+                                <option value="autor">Год</option>
+                                <option value="name">Месяц</option>
+                                <option value="status">Неделя</option>
+                            </select>
 
                         </div>
-                    </section>
-                    <section class="personal-section playlists">
-                        <h2 class="personal-section__title">Новые песни</h2>
-                        <div class="playlists__item track">
-                            <img class="track__img" src="../img/personal_page/albums/Kancler.webp" alt="Обложка песни">
-                            <div class="track__content">
-                                <h5 class="track__name">Еще одна песня</h5>
-                                <span class="track__autor">Другой Исполнитель</span>
-                                <span class="track__time">Дата релиза: 10.05.24</span>
-                            </div>
-                            <div class="track__actions">
-                                <button class="btn track__btn active">
-                                    <svg class="track__icon track__icon--play">
-                                        <use xlink:href="#play"></use>
-                                    </svg>
-                                    <span class="track__btn--text">Послушать</span>
-                                </button>
-                                <button class="btn track__btn track__like like">
-                                    <svg class="track__icon track__icon--like">
-                                        <use xlink:href="#like"></use>
-                                    </svg>
-                                    <span class="track__btn--text">Отметить</span>
-                                </button>
-                                <button class="btn track__btn" disabled>
-                                    <svg class="track__icon track__icon--donat">
-                                        <use xlink:href="#donat"></use>
-                                    </svg>
-                                    <span class="track__btn--text">Поддержать</span>
-                                </button>
-                            </div>
+                        <div class="statistics__info">
+                            <div class="preloader"></div>
+                            <p class="statistics__info--text">Мы обновляем данные по вашей статистике. Попробуйте
+                                проверить через несколько часов.</p>
+                        </div>
+                        <div class="statistics__chart">
+                            <canvas id="chart"></canvas>
                         </div>
                     </section>
                 </article>
@@ -903,7 +818,9 @@
     </div>
     <script src="../libs/choices.min.js"></script>
     <script src="../libs/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/personal.js"></script>
+    <script src="../js/statistics.js"></script>
 </body>
 
 </html>

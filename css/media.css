@@ -96,8 +96,17 @@
     .link {
         font-size: 14px;
     }
+
     .services {
         margin: 50px 0;
+    }
+
+    .profile-card {
+        flex-direction: column;        
+    }
+
+    .profile-card__content {
+        align-items: center;
     }
 }
 

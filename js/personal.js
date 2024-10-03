@@ -9,17 +9,26 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     // Скрытие подменю в боковой панели
-    const $buttonBoxClose = document.getElementById('closeBox'),
+    const $buttonBoxClose = document.querySelectorAll('.box__close'),
+    $boxAll = document.querySelectorAll('.aside-personal__box'),
         $menuAll = document.querySelectorAll('.aside-personal__menu');
 
-        $buttonBoxClose.addEventListener('click', (event) => {
+        $buttonBoxClose.forEach(btn => {
+            btn.addEventListener('click', (event) => {
             
-            $buttonBoxClose.classList.toggle('visible')
+            btn.classList.toggle('visible')
 
             $menuAll.forEach(elem => {    
                 if (elem.dataset.menu === event.target.dataset.menu)
                 elem.classList.toggle('visible');
             })
+
+            $boxAll.forEach(elem => { 
+                if (elem.dataset.menu === event.target.dataset.menu)
+                    elem.classList.toggle('small');
+            })
+        })
+        
     })
 
     //Смена активного пункта в боковой панели 
@@ -98,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 }
     
-
     // Открытие модалки с реквизитами договора
     $btnAgreementAll.forEach(btn => {
         btn.addEventListener('click', () => {
