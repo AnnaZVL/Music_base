@@ -39,7 +39,8 @@ img {
     --color-logo: #727bf6;
     --color-blue-r: 83, 95, 246;
     --color-drop: #1e1e5e;
-    --color-gray: #aaa;    
+    --color-gray: #aaa;
+    --color-green: rgb(29, 202, 29);    
 }
 
 @font-face {

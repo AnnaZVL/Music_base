@@ -195,8 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Закрытие списка по клику вне его
     document.addEventListener('click', (event) => {
-        if (!$list.contains(event.target)) {
-            console.log('object');
+        if (!$list.contains(event.target)) {            
             $list.classList.remove('show');
         }
     })
