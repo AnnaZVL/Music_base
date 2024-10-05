@@ -200,6 +200,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
+    z-index: -1;
     gap: 30px;
     width: 100%;
     transform: translateY(-100%);
@@ -213,6 +215,7 @@
     transform: translateY(5%);
     opacity: 1;
     visibility: visible;
+    z-index: 10;
 }
 
 .aside-menu__title {
@@ -860,7 +863,7 @@
     text-transform: uppercase;
 }
 
-.event-card__ations {
+.event-card__actions {
     margin-top: auto;
     display: flex;
     align-items: center;
@@ -2381,6 +2384,10 @@ input[type='date']::after {
     font-weight: 500;
 }
 
+.finance__item--text {
+    font-size: 18px;
+}
+
 .finance__item--count {
     padding-right: 30px;
     position: relative;
@@ -2394,10 +2401,24 @@ input[type='date']::after {
     position: absolute;
     right: 0px;    
 }
-.finance__item--text {
+
+.finance__item--descr {
     color: var(--color-blue);
     font-size: 12px;
 }
+
+.finance__item.big {    
+    grid-row: span 2;
+    justify-content: space-between;
+    color: var(--color-second);
+}
+
+.report__list {
+    display: grid;    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;      
+}
+
 
 .finance__item--box {
     display: flex;
@@ -2532,4 +2553,220 @@ input[type='date']::after {
 
 .table__item--count.expenditure {
     color: var(--color-second);
+}
+
+/*Education*/
+
+.education__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.education-card {   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    position: relative;
+    border-radius: 20px;
+    background: radial-gradient(circle at bottom, var(--color-blue) -13%, var(--color-bg) 80%); 
+    height: 100%;
+}
+
+.education-card__link {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+}
+
+.education-card__img {
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.education-card__body {
+    padding: 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    height: 100%;
+}
+
+.education-card__title {
+    font-size: 24px;
+    color: var(--color-white);
+}
+
+.education-card__title::first-letter {
+    text-transform: uppercase;
+}
+
+.education-card__actions {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;    
+    width: 100%;
+}
+
+.education-card__show {
+    padding: 10px;
+    border: 1px solid var(--color-blue);
+    color: var(--color-white);
+    border-radius: 10px;     
+    font-size: 13px;  
+    outline: none;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.education-card__show:hover {
+    color: var(--color-second);
+    border-color: var(--color-second);
+}
+
+.education-card__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.education-card__btn {
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-card__btn:hover {
+    transform: scale(1.1);
+}
+
+.education-card__icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-white);
+}
+
+.education-card__btn.active > .education-card__icon--star {
+    fill: var(--color-second);
+}
+
+/*Multilink*/
+.multilink .choices {
+    max-width: 300px;
+}
+
+.multilink__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.multilink__card {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;    
+    border-radius: 20px;
+    border: 1px solid var(--color-blue);   
+    width: 100%; 
+}
+
+.multilink__list--header {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;        
+}
+
+.multilink__list--box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; 
+    flex-wrap: nowrap;
+    flex-basis: 50%;
+}
+
+.multilink__list--title {  
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.multilink__card--info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-basis: 40%;
+}
+
+.multilink__card--img {
+    width: 100px;
+    height: 100px;
+}
+
+.multilink__card--content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.multilink__card--name {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.multilink__card--autor {
+    font-size: 18px;
+}
+
+.multilink__card--text {
+    font-size: 18px;
+}
+
+.multilink__card--actions {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.multilink__card--buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.multilink__card--btn {
+    padding: 7px;   
+    border: 1px solid transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.3s ease-in-out;
+}
+
+.multilink__card--icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--color-white);
+}
+
+.multilink__card--btn:hover {
+    border-color: var(--color-white);
 }

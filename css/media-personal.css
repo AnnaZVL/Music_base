@@ -174,6 +174,10 @@
         width: 500px;
     }
 
+    
+    .multilink__list--header {
+        display: none;
+    }
 }
 
 @media (max-width: 562px) {
@@ -258,6 +262,14 @@
 
     .statistics__chart, .statistics__filters {
         display: none;
+    }
+
+    .multilink__card  {
+        flex-direction: column;
+    }
+
+    .multilink__list--box {
+        width: 100%;
     }
 } 
 

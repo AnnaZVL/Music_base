@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
         registerBtn = document.getElementById('registerBtn'),
         checkbox = document.getElementById('reg-log');
 
+        if (formAll) {
     formAll.addEventListener('submit', (event) => {
         event.preventDefault()
 
@@ -148,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
         registerBtn.classList.add('active');
         loginBtn.classList.remove('active');        
     });
-    
+}
     // Слайдер секции топ исполнителей
     const swiperTop = new Swiper('.top__list', {        
         direction: 'horizontal',
